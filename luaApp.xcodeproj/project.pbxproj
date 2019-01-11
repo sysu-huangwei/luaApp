@@ -15,7 +15,7 @@
 		C5BAF4EE21E871CC0078CC04 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = C5BAF4ED21E871CC0078CC04 /* main.m */; };
 		C5BAF4FD21E8729E0078CC04 /* liblua.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C5BAF4FC21E8729E0078CC04 /* liblua.a */; };
 		C5BAF50021E873560078CC04 /* LuaTest.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C5BAF4FE21E873560078CC04 /* LuaTest.cpp */; };
-		C5BAF50221E87BDF0078CC04 /* add.lua in Resources */ = {isa = PBXBuildFile; fileRef = C5BAF50121E87BDF0078CC04 /* add.lua */; };
+		C5BAF50221E87BDF0078CC04 /* CPP_Call_Lua.lua in Resources */ = {isa = PBXBuildFile; fileRef = C5BAF50121E87BDF0078CC04 /* CPP_Call_Lua.lua */; };
 		C5BAF50521E8872A0078CC04 /* PublicFuncByiOS.mm in Sources */ = {isa = PBXBuildFile; fileRef = C5BAF50421E8872A0078CC04 /* PublicFuncByiOS.mm */; };
 /* End PBXBuildFile section */
 
@@ -38,7 +38,7 @@
 		C5BAF4FC21E8729E0078CC04 /* liblua.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = liblua.a; sourceTree = "<group>"; };
 		C5BAF4FE21E873560078CC04 /* LuaTest.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = LuaTest.cpp; sourceTree = "<group>"; };
 		C5BAF4FF21E873560078CC04 /* LuaTest.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = LuaTest.hpp; sourceTree = "<group>"; };
-		C5BAF50121E87BDF0078CC04 /* add.lua */ = {isa = PBXFileReference; lastKnownFileType = text; path = add.lua; sourceTree = "<group>"; };
+		C5BAF50121E87BDF0078CC04 /* CPP_Call_Lua.lua */ = {isa = PBXFileReference; lastKnownFileType = text; path = CPP_Call_Lua.lua; sourceTree = "<group>"; };
 		C5BAF50321E8872A0078CC04 /* PublicFuncByiOS.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PublicFuncByiOS.h; sourceTree = "<group>"; };
 		C5BAF50421E8872A0078CC04 /* PublicFuncByiOS.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = PublicFuncByiOS.mm; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -86,7 +86,7 @@
 				C5BAF4ED21E871CC0078CC04 /* main.m */,
 				C5BAF4FE21E873560078CC04 /* LuaTest.cpp */,
 				C5BAF4FF21E873560078CC04 /* LuaTest.hpp */,
-				C5BAF50121E87BDF0078CC04 /* add.lua */,
+				C5BAF50121E87BDF0078CC04 /* CPP_Call_Lua.lua */,
 				C5BAF50321E8872A0078CC04 /* PublicFuncByiOS.h */,
 				C5BAF50421E8872A0078CC04 /* PublicFuncByiOS.mm */,
 			);
@@ -179,7 +179,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C5BAF50221E87BDF0078CC04 /* add.lua in Resources */,
+				C5BAF50221E87BDF0078CC04 /* CPP_Call_Lua.lua in Resources */,
 				C5BAF4EB21E871CC0078CC04 /* LaunchScreen.storyboard in Resources */,
 				C5BAF4E821E871CC0078CC04 /* Assets.xcassets in Resources */,
 				C5BAF4E621E871CB0078CC04 /* Main.storyboard in Resources */,
