@@ -11,8 +11,6 @@
 
 #include <stdio.h>
 
-void run();
-
-int add_C(int a, int b);
+void CPP_Call_Lua();
 
 #endif /* LuaTest_hpp */
