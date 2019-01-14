@@ -13,7 +13,17 @@ android {
         externalNativeBuild {
             cmake {
                 cppFlags "-std=c++11 -frtti -fexceptions"
+                arguments "-DANDROID_ABI=armeabi-v7a",
+                        "-DANDROID_PLATFORM=android-14",
+                        "-DANDROID_STL=gnustl_shared",
+                        "-DANDROID_TOOLCHAIN=gcc",
+                        "-DANDROID_PIE=ON",
+                        "-DCMAKE_BUILD_TYPE=Release"
             }
+        }
+        ndk {
+            //打包进APK的ABI类型
+            abiFilters "armeabi-v7a"
         }
     }
     buildTypes {
