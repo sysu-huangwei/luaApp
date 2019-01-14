@@ -8,6 +8,7 @@
 
 #include "LuaTest.hpp"
 #include "lua.hpp"
+#include "Log.h"
 
 
 static const char* CPP_Call_Lua_str =
@@ -36,7 +37,7 @@ void CPP_Call_Lua() {
     //打开并解释运行一个lua脚本
     error = luaL_dostring(l, CPP_Call_Lua_str);
     if (error) {
-        printf("luaL_dofile error: %d\n", error);
+        LOGE("luaL_dofile error: %d", error);
     }
 
     // 通过lua_getglobal方法把lua脚本内指定名称的变量压入栈顶
@@ -48,29 +49,29 @@ void CPP_Call_Lua() {
     //读取字符串
     lua_getglobal(l, "name");
     const char* name = lua_tostring(l, -1);
-    printf("name = %s\n", name);
+    LOGI("name = %s", name);
     
     //读取数字
     lua_getglobal(l, "age");
     long age = lua_tointeger(l, -1);
-    printf("age = %ld\n", age);
+    LOGI("age = %ld", age);
 
     //把表压栈的时候，会把表的所有元素按顺序压栈，表的第一个元素会在栈顶
     //读取表
     lua_getglobal(l, "company");
     lua_getfield(l, -1, "name");
     const char* companyName = lua_tostring(l, -1);
-    printf("companyName = %s\n", companyName);
+    LOGI("companyName = %s", companyName);
     lua_getfield(l, -2, "department");
     const char* department = lua_tostring(l, -1);
-    printf("department = %s\n", department);
+    LOGI("department = %s", department);
     
     //修改表的元素
     lua_pushstring(l, "O2Cam");
     lua_setfield(l, -4, "App");//TODO:这里为什么是-4和-3 ？
     lua_getfield(l, -3, "App");
     const char* App = lua_tostring(l, -1);
-    printf("App = %s\n", App);
+    LOGI("App = %s", App);
     
     //调用lua的方法，方法的返回值会压入栈顶
     lua_getglobal(l, "add_lua");
@@ -79,11 +80,11 @@ void CPP_Call_Lua() {
     
     error = lua_pcall(l, 2, 1, 0);//2:参数个数 1:返回值个数 0:错误处理函数在栈中的索引，0表示没有
     if (error) {
-        printf("lua_pcall error: %d\n", error);
+        LOGE("lua_pcall error: %d", error);
     }
     //从栈顶取lua函数的返回值
     long result = lua_tointeger(l, -1);
-    printf("result = %ld\n", result);
+    LOGI("result = %ld", result);
     
     lua_close(l);
 }
@@ -119,8 +120,13 @@ void Lua_Call_CPP() {
     //打开并解释运行一个lua脚本
     error = luaL_dostring(l, Lua_Call_CPP_str);
     if (error) {
-        printf("luaL_dofile error: %d\n", error);
+        LOGE("luaL_dofile error: %d", error);
     }
+    
+    //结果值
+    lua_getglobal(l, "sum");
+    long result = lua_tointeger(l, -1);
+    LOGI("result = %ld", result);
     
     lua_close(l);
 }
