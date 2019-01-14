@@ -17,8 +17,7 @@ android {
                         "-DANDROID_PLATFORM=android-14",
                         "-DANDROID_STL=gnustl_shared",
                         "-DANDROID_TOOLCHAIN=gcc",
-                        "-DANDROID_PIE=ON",
-                        "-DCMAKE_BUILD_TYPE=Release"
+                        "-DANDROID_PIE=ON"
             }
         }
         ndk {

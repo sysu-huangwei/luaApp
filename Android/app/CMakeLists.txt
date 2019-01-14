@@ -36,4 +36,5 @@ add_library(${MY_LIBRARY_NAME} SHARED ${SOURCE_FILES})
 target_link_libraries(
     lua
     liblua.a
+    log
 )
