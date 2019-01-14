@@ -8,20 +8,33 @@
 
 #include "LuaTest.hpp"
 #include "lua.hpp"
-#include <string>
-#include "PublicFuncByiOS.h"
+
+
+static const char* CPP_Call_Lua_str =
+"print(\"Hello World!\");  \n \
+name = \"huangwei\"  \n \
+age = 18  \n \
+company = {name = \"meitu\", department = \"bct\"}  \n \
+function add_lua(a, b)  \n \
+return a + b;  \n \
+end;  \n ";
+
+
+static const char* Lua_Call_CPP_str =
+"a = 3  \n \
+b = 7  \n \
+c = 5  \n \
+sum = add_CPP(a,b,c)  \n \
+print(\"sum = \",sum)  \n ";
 
 void CPP_Call_Lua() {
     //所有lua API的调用之前都要创建一个lua state
     lua_State *l = luaL_newstate();
     luaL_openlibs(l);//加载lua基本库
     
-    std::string bundlePath = AppBundlePath();
-    bundlePath += "/CPP_Call_Lua.lua";
-    
     int error;
     //打开并解释运行一个lua脚本
-    error = luaL_dofile(l, bundlePath.c_str());
+    error = luaL_dostring(l, CPP_Call_Lua_str);
     if (error) {
         printf("luaL_dofile error: %d\n", error);
     }
@@ -102,12 +115,9 @@ void Lua_Call_CPP() {
     //向lua注册函数，这样lua脚本就可以找到这个名字的C函数
     lua_register(l, "add_CPP", add_CPP);
     
-    std::string bundlePath = AppBundlePath();
-    bundlePath += "/Lua_Call_CPP.lua";
-    
     int error;
     //打开并解释运行一个lua脚本
-    error = luaL_dofile(l, bundlePath.c_str());
+    error = luaL_dostring(l, Lua_Call_CPP_str);
     if (error) {
         printf("luaL_dofile error: %d\n", error);
     }
