@@ -8,13 +8,13 @@
 
 /* Begin PBXBuildFile section */
 		C569BC5321EC758100A09BAC /* liblua.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C569BC4821EC758000A09BAC /* liblua.a */; };
+		C569BC5B21EC79A100A09BAC /* LuaTest.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C569BC5A21EC79A000A09BAC /* LuaTest.cpp */; };
 		C5BAF4E021E871CB0078CC04 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C5BAF4DF21E871CB0078CC04 /* AppDelegate.m */; };
 		C5BAF4E321E871CB0078CC04 /* ViewController.mm in Sources */ = {isa = PBXBuildFile; fileRef = C5BAF4E221E871CB0078CC04 /* ViewController.mm */; };
 		C5BAF4E621E871CB0078CC04 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C5BAF4E421E871CB0078CC04 /* Main.storyboard */; };
 		C5BAF4E821E871CC0078CC04 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C5BAF4E721E871CC0078CC04 /* Assets.xcassets */; };
 		C5BAF4EB21E871CC0078CC04 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C5BAF4E921E871CC0078CC04 /* LaunchScreen.storyboard */; };
 		C5BAF4EE21E871CC0078CC04 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = C5BAF4ED21E871CC0078CC04 /* main.m */; };
-		C5BAF50021E873560078CC04 /* LuaTest.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C5BAF4FE21E873560078CC04 /* LuaTest.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +24,8 @@
 		C569BC4421EC758000A09BAC /* lauxlib.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = lauxlib.h; sourceTree = "<group>"; };
 		C569BC4521EC758000A09BAC /* lua.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = lua.h; sourceTree = "<group>"; };
 		C569BC4821EC758000A09BAC /* liblua.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = liblua.a; sourceTree = "<group>"; };
+		C569BC5921EC79A000A09BAC /* LuaTest.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = LuaTest.hpp; sourceTree = "<group>"; };
+		C569BC5A21EC79A000A09BAC /* LuaTest.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = LuaTest.cpp; sourceTree = "<group>"; };
 		C5BAF4DB21E871CB0078CC04 /* luaApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = luaApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C5BAF4DE21E871CB0078CC04 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		C5BAF4DF21E871CB0078CC04 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -34,8 +36,6 @@
 		C5BAF4EA21E871CC0078CC04 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C5BAF4EC21E871CC0078CC04 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C5BAF4ED21E871CC0078CC04 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		C5BAF4FE21E873560078CC04 /* LuaTest.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = LuaTest.cpp; sourceTree = "<group>"; };
-		C5BAF4FF21E873560078CC04 /* LuaTest.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = LuaTest.hpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,6 +103,16 @@
 			path = ios;
 			sourceTree = "<group>";
 		};
+		C569BC5821EC79A000A09BAC /* src */ = {
+			isa = PBXGroup;
+			children = (
+				C569BC5921EC79A000A09BAC /* LuaTest.hpp */,
+				C569BC5A21EC79A000A09BAC /* LuaTest.cpp */,
+			);
+			name = src;
+			path = ../../src;
+			sourceTree = "<group>";
+		};
 		C5BAF4D221E871CB0078CC04 = {
 			isa = PBXGroup;
 			children = (
@@ -123,6 +133,7 @@
 		C5BAF4DD21E871CB0078CC04 /* luaApp */ = {
 			isa = PBXGroup;
 			children = (
+				C569BC5821EC79A000A09BAC /* src */,
 				C569BC3E21EC758000A09BAC /* liblua */,
 				C5BAF4DE21E871CB0078CC04 /* AppDelegate.h */,
 				C5BAF4DF21E871CB0078CC04 /* AppDelegate.m */,
@@ -133,8 +144,6 @@
 				C5BAF4E921E871CC0078CC04 /* LaunchScreen.storyboard */,
 				C5BAF4EC21E871CC0078CC04 /* Info.plist */,
 				C5BAF4ED21E871CC0078CC04 /* main.m */,
-				C5BAF4FE21E873560078CC04 /* LuaTest.cpp */,
-				C5BAF4FF21E873560078CC04 /* LuaTest.hpp */,
 			);
 			path = luaApp;
 			sourceTree = "<group>";
@@ -211,7 +220,7 @@
 			files = (
 				C5BAF4E321E871CB0078CC04 /* ViewController.mm in Sources */,
 				C5BAF4EE21E871CC0078CC04 /* main.m in Sources */,
-				C5BAF50021E873560078CC04 /* LuaTest.cpp in Sources */,
+				C569BC5B21EC79A100A09BAC /* LuaTest.cpp in Sources */,
 				C5BAF4E021E871CB0078CC04 /* AppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
