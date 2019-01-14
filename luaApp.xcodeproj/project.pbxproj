@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C569BC3121EC654900A09BAC /* Lua_Call_CPP.lua in Resources */ = {isa = PBXBuildFile; fileRef = C569BC3021EC654900A09BAC /* Lua_Call_CPP.lua */; };
 		C5BAF4E021E871CB0078CC04 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C5BAF4DF21E871CB0078CC04 /* AppDelegate.m */; };
 		C5BAF4E321E871CB0078CC04 /* ViewController.mm in Sources */ = {isa = PBXBuildFile; fileRef = C5BAF4E221E871CB0078CC04 /* ViewController.mm */; };
 		C5BAF4E621E871CB0078CC04 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C5BAF4E421E871CB0078CC04 /* Main.storyboard */; };
@@ -20,6 +21,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		C569BC3021EC654900A09BAC /* Lua_Call_CPP.lua */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Lua_Call_CPP.lua; sourceTree = "<group>"; };
 		C5BAF4DB21E871CB0078CC04 /* luaApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = luaApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C5BAF4DE21E871CB0078CC04 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		C5BAF4DF21E871CB0078CC04 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -87,6 +89,7 @@
 				C5BAF4FE21E873560078CC04 /* LuaTest.cpp */,
 				C5BAF4FF21E873560078CC04 /* LuaTest.hpp */,
 				C5BAF50121E87BDF0078CC04 /* CPP_Call_Lua.lua */,
+				C569BC3021EC654900A09BAC /* Lua_Call_CPP.lua */,
 				C5BAF50321E8872A0078CC04 /* PublicFuncByiOS.h */,
 				C5BAF50421E8872A0078CC04 /* PublicFuncByiOS.mm */,
 			);
@@ -183,6 +186,7 @@
 				C5BAF4EB21E871CC0078CC04 /* LaunchScreen.storyboard in Resources */,
 				C5BAF4E821E871CC0078CC04 /* Assets.xcassets in Resources */,
 				C5BAF4E621E871CB0078CC04 /* Main.storyboard in Resources */,
+				C569BC3121EC654900A09BAC /* Lua_Call_CPP.lua in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

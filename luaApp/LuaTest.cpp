@@ -74,3 +74,43 @@ void CPP_Call_Lua() {
     
     lua_close(l);
 }
+
+
+int add_CPP(lua_State *l) {
+    //获取参数个数
+    int n = lua_gettop(l);
+    
+    double sum = 0;
+    for (int i = 1; i <= n; i++) {
+        //获取参数个数之后，栈顶开始连续n个元素都是参数，使用索引取出来
+        double num = lua_tonumber(l, -i);
+        sum += num;
+    }
+    
+    //把计算结果压栈，这样lua才能获取到
+    lua_pushnumber(l, sum);
+    
+    //返回值的个数
+    return 1;
+}
+
+void Lua_Call_CPP() {
+    //所有lua API的调用之前都要创建一个lua state
+    lua_State *l = luaL_newstate();
+    luaL_openlibs(l);//加载lua基本库
+    
+    //向lua注册函数，这样lua脚本就可以找到这个名字的C函数
+    lua_register(l, "add_CPP", add_CPP);
+    
+    std::string bundlePath = AppBundlePath();
+    bundlePath += "/Lua_Call_CPP.lua";
+    
+    int error;
+    //打开并解释运行一个lua脚本
+    error = luaL_dofile(l, bundlePath.c_str());
+    if (error) {
+        printf("luaL_dofile error: %d\n", error);
+    }
+    
+    lua_close(l);
+}

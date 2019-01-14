@@ -13,4 +13,6 @@
 
 void CPP_Call_Lua();
 
+void Lua_Call_CPP();
+
 #endif /* LuaTest_hpp */

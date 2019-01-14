@@ -21,6 +21,8 @@
     
     CPP_Call_Lua();
     
+    Lua_Call_CPP();
+    
 }
 
 
