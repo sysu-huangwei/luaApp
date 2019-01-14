@@ -8,13 +8,13 @@
 
 /* Begin PBXBuildFile section */
 		C569BC3121EC654900A09BAC /* Lua_Call_CPP.lua in Resources */ = {isa = PBXBuildFile; fileRef = C569BC3021EC654900A09BAC /* Lua_Call_CPP.lua */; };
+		C569BC3D21EC6CFB00A09BAC /* liblua.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C569BC3A21EC6CA100A09BAC /* liblua.a */; };
 		C5BAF4E021E871CB0078CC04 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C5BAF4DF21E871CB0078CC04 /* AppDelegate.m */; };
 		C5BAF4E321E871CB0078CC04 /* ViewController.mm in Sources */ = {isa = PBXBuildFile; fileRef = C5BAF4E221E871CB0078CC04 /* ViewController.mm */; };
 		C5BAF4E621E871CB0078CC04 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C5BAF4E421E871CB0078CC04 /* Main.storyboard */; };
 		C5BAF4E821E871CC0078CC04 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C5BAF4E721E871CC0078CC04 /* Assets.xcassets */; };
 		C5BAF4EB21E871CC0078CC04 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C5BAF4E921E871CC0078CC04 /* LaunchScreen.storyboard */; };
 		C5BAF4EE21E871CC0078CC04 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = C5BAF4ED21E871CC0078CC04 /* main.m */; };
-		C5BAF4FD21E8729E0078CC04 /* liblua.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C5BAF4FC21E8729E0078CC04 /* liblua.a */; };
 		C5BAF50021E873560078CC04 /* LuaTest.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C5BAF4FE21E873560078CC04 /* LuaTest.cpp */; };
 		C5BAF50221E87BDF0078CC04 /* CPP_Call_Lua.lua in Resources */ = {isa = PBXBuildFile; fileRef = C5BAF50121E87BDF0078CC04 /* CPP_Call_Lua.lua */; };
 		C5BAF50521E8872A0078CC04 /* PublicFuncByiOS.mm in Sources */ = {isa = PBXBuildFile; fileRef = C5BAF50421E8872A0078CC04 /* PublicFuncByiOS.mm */; };
@@ -22,6 +22,12 @@
 
 /* Begin PBXFileReference section */
 		C569BC3021EC654900A09BAC /* Lua_Call_CPP.lua */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Lua_Call_CPP.lua; sourceTree = "<group>"; };
+		C569BC3421EC6CA100A09BAC /* luaconf.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = luaconf.h; sourceTree = "<group>"; };
+		C569BC3521EC6CA100A09BAC /* lua.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = lua.hpp; sourceTree = "<group>"; };
+		C569BC3621EC6CA100A09BAC /* lualib.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = lualib.h; sourceTree = "<group>"; };
+		C569BC3721EC6CA100A09BAC /* lauxlib.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = lauxlib.h; sourceTree = "<group>"; };
+		C569BC3821EC6CA100A09BAC /* lua.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = lua.h; sourceTree = "<group>"; };
+		C569BC3A21EC6CA100A09BAC /* liblua.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = liblua.a; sourceTree = "<group>"; };
 		C5BAF4DB21E871CB0078CC04 /* luaApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = luaApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C5BAF4DE21E871CB0078CC04 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		C5BAF4DF21E871CB0078CC04 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -32,12 +38,6 @@
 		C5BAF4EA21E871CC0078CC04 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C5BAF4EC21E871CC0078CC04 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C5BAF4ED21E871CC0078CC04 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		C5BAF4F621E8729E0078CC04 /* luaconf.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = luaconf.h; sourceTree = "<group>"; };
-		C5BAF4F721E8729E0078CC04 /* lua.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = lua.hpp; sourceTree = "<group>"; };
-		C5BAF4F821E8729E0078CC04 /* lualib.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = lualib.h; sourceTree = "<group>"; };
-		C5BAF4F921E8729E0078CC04 /* lauxlib.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = lauxlib.h; sourceTree = "<group>"; };
-		C5BAF4FA21E8729E0078CC04 /* lua.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = lua.h; sourceTree = "<group>"; };
-		C5BAF4FC21E8729E0078CC04 /* liblua.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = liblua.a; sourceTree = "<group>"; };
 		C5BAF4FE21E873560078CC04 /* LuaTest.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = LuaTest.cpp; sourceTree = "<group>"; };
 		C5BAF4FF21E873560078CC04 /* LuaTest.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = LuaTest.hpp; sourceTree = "<group>"; };
 		C5BAF50121E87BDF0078CC04 /* CPP_Call_Lua.lua */ = {isa = PBXFileReference; lastKnownFileType = text; path = CPP_Call_Lua.lua; sourceTree = "<group>"; };
@@ -50,18 +50,56 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C5BAF4FD21E8729E0078CC04 /* liblua.a in Frameworks */,
+				C569BC3D21EC6CFB00A09BAC /* liblua.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		C569BC3221EC6CA100A09BAC /* liblua */ = {
+			isa = PBXGroup;
+			children = (
+				C569BC3321EC6CA100A09BAC /* include */,
+				C569BC3921EC6CA100A09BAC /* lib */,
+			);
+			name = liblua;
+			path = ../../liblua;
+			sourceTree = "<group>";
+		};
+		C569BC3321EC6CA100A09BAC /* include */ = {
+			isa = PBXGroup;
+			children = (
+				C569BC3421EC6CA100A09BAC /* luaconf.h */,
+				C569BC3521EC6CA100A09BAC /* lua.hpp */,
+				C569BC3621EC6CA100A09BAC /* lualib.h */,
+				C569BC3721EC6CA100A09BAC /* lauxlib.h */,
+				C569BC3821EC6CA100A09BAC /* lua.h */,
+			);
+			path = include;
+			sourceTree = "<group>";
+		};
+		C569BC3921EC6CA100A09BAC /* lib */ = {
+			isa = PBXGroup;
+			children = (
+				C569BC3A21EC6CA100A09BAC /* liblua.a */,
+			);
+			path = lib;
+			sourceTree = "<group>";
+		};
+		C569BC3C21EC6CFB00A09BAC /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		C5BAF4D221E871CB0078CC04 = {
 			isa = PBXGroup;
 			children = (
 				C5BAF4DD21E871CB0078CC04 /* luaApp */,
 				C5BAF4DC21E871CB0078CC04 /* Products */,
+				C569BC3C21EC6CFB00A09BAC /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -76,7 +114,7 @@
 		C5BAF4DD21E871CB0078CC04 /* luaApp */ = {
 			isa = PBXGroup;
 			children = (
-				C5BAF4F421E8729E0078CC04 /* liblua */,
+				C569BC3221EC6CA100A09BAC /* liblua */,
 				C5BAF4DE21E871CB0078CC04 /* AppDelegate.h */,
 				C5BAF4DF21E871CB0078CC04 /* AppDelegate.m */,
 				C5BAF4E121E871CB0078CC04 /* ViewController.h */,
@@ -94,35 +132,6 @@
 				C5BAF50421E8872A0078CC04 /* PublicFuncByiOS.mm */,
 			);
 			path = luaApp;
-			sourceTree = "<group>";
-		};
-		C5BAF4F421E8729E0078CC04 /* liblua */ = {
-			isa = PBXGroup;
-			children = (
-				C5BAF4F521E8729E0078CC04 /* include */,
-				C5BAF4FB21E8729E0078CC04 /* lib */,
-			);
-			path = liblua;
-			sourceTree = SOURCE_ROOT;
-		};
-		C5BAF4F521E8729E0078CC04 /* include */ = {
-			isa = PBXGroup;
-			children = (
-				C5BAF4F621E8729E0078CC04 /* luaconf.h */,
-				C5BAF4F721E8729E0078CC04 /* lua.hpp */,
-				C5BAF4F821E8729E0078CC04 /* lualib.h */,
-				C5BAF4F921E8729E0078CC04 /* lauxlib.h */,
-				C5BAF4FA21E8729E0078CC04 /* lua.h */,
-			);
-			path = include;
-			sourceTree = "<group>";
-		};
-		C5BAF4FB21E8729E0078CC04 /* lib */ = {
-			isa = PBXGroup;
-			children = (
-				C5BAF4FC21E8729E0078CC04 /* liblua.a */,
-			);
-			path = lib;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -353,7 +362,7 @@
 				);
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
-					"$(PROJECT_DIR)/liblua/lib",
+					"\"$(SRCROOT)/../liblua/lib\"",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = meitu.luaApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -375,7 +384,7 @@
 				);
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
-					"$(PROJECT_DIR)/liblua/lib",
+					"\"$(SRCROOT)/../liblua/lib\"",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = meitu.luaApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
