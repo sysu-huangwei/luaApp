@@ -26,7 +26,7 @@ static const char* Lua_Call_CPP_str =
 b = 7  \n \
 c = 5  \n \
 sum = add_CPP(a,b,c)  \n \
-print(\"sum = \",sum)  \n ";
+print(\"sum = \" .. sum)  \n ";
 
 void CPP_Call_Lua() {
     //所有lua API的调用之前都要创建一个lua state
